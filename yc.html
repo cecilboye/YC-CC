@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welkom op de goudegids.</title>
+    <style>
+
+    </style>
+
+    <script>
+        // function checkLogIN() {
+        //     var username = document.getElementById("username").value;
+        //     // var email = document.getElementById("email").value;
+        //     username = username.trim().toLowerCase();
+
+        //     if (username == "sven" || username == "cecil" || username == "edo" || username == "david" || username == "mustafa" || username == "martijn") {
+        //         document.getElementById("successbericht").innerHTML = "Gebruiker bestaat";
+        //         document.getElementById("successbericht").style.backgroundColor = "green";
+        //         document.getElementById("button1").hidden = true;
+        //     }
+        //     else {
+        //         document.getElementById("successbericht").innerHTML = "Gebruiker bestaat niet voer een andere gebruikersnaam in";
+        //         document.getElementById("successbericht").style.backgroundColor = "red";
+        //     }
+
+
+        // }
+
+        function checkLogIN() {
+            let Gebruikersnaam = ["Sven", "Karel"];
+            let Wachtwoord = ["Welkom0299", "Doei123"];
+
+            username = document.getElementById("username").value;
+            password = document.getElementById("password").value;
+
+            correct = false;
+
+            for (let i = 0; i < Gebruikersnaam.length; i++) {
+                if (username == Gebruikersnaam[i] && password == Wachtwoord[i]) {
+                    console.log("Wachtwoord klopt");
+                    correct = true;
+                    break;
+                }
+
+            }
+            if (!correct) {
+                console.log("Wachtwoord klopt niet");
+            }
+
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1 id="welkomstitel">Welkom in de goudegids</h1>
+
+    <img src="plaatje.png">
+
+
+    <p>Voer de gebruiksnaam en e-mail in om de telefoonnummer op te halen</p>
+    <form>
+        <label for="username">Gebruikersnaam:</label><br>
+        <input type="text" id="username" name="username" value=""><br>
+        <label for="password">Wachtwoord:</label><br>
+        <input type="text" id="password" name="password" value="">
+    </form>
+
+    <button type="button" id="button1" onclick="checkLogIN()"> klik op mij</button>
+
+    <div id="successbericht">
+
+</body>
+
+</html>
